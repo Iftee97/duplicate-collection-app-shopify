@@ -1,6 +1,7 @@
 import { Shopify } from "@shopify/shopify-api"
 
-const CREATE_COLLECTION_MUTATION = `mutation collectionCreate($input: CollectionInput!) {
+const CREATE_COLLECTION_MUTATION = `
+mutation collectionCreate($input: CollectionInput!) {
   collectionCreate(input: $input) {
     collection {
       id
@@ -14,7 +15,6 @@ const CREATE_COLLECTION_MUTATION = `mutation collectionCreate($input: Collection
 
 export default async function collectionCreator(session, payload) {
   const client = new Shopify.Clients.Graphql(session.shop, session.accessToken)
-
   console.log("incomingereodf", payload)
 
   try {
