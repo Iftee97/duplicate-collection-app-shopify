@@ -13,7 +13,7 @@ const sortOrderType = {
   MANUAL: "MANUAL",
 }
 
-const CollectionClone = () => {
+export default function CollectionClone() {
   const [showResourcePicker, setShowResourcePicker] = useState(false)
   const [collectionTitle, setCollectionTitle] = useState(null)
   const [selectedCollection, setSelectedCollection] = useState(null)
@@ -194,5 +194,3 @@ const CollectionClone = () => {
     </Page>
   )
 }
-
-export default CollectionClone
